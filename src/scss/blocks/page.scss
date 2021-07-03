@@ -1,0 +1,22 @@
+.page {
+  min-height: 100%;
+  font-size: 16px;
+  font-family: "Open Sans", "Arial", sans-serif;
+  line-height: 22px;
+  margin: 0;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  background-color: white;
+  color: $basic-black;
+  overflow-x: hidden;
+}
+  
+.page__header,
+.page__footer {
+  background-color: $basic-grey;
+}
+
+.page__main {
+  max-width: 1166px;
+  margin: 0 auto;
+}

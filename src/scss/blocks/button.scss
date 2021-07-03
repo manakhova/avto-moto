@@ -1,0 +1,16 @@
+.button {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  padding: 16px 20px;
+  border: none;
+  color: $basic-red;
+  background-color: white;
+  border: 1px solid $basic-red;
+  box-sizing: border-box;
+
+  &--active {
+    background-color: $basic-red;
+    color: white;
+  }
+}
