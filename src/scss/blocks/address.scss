@@ -1,0 +1,38 @@
+.address {
+  display: flex;
+  justify-content: space-between;
+  max-width: 780px;
+}
+
+.address__info-address,
+.address__info-work,
+.address__info-phone,
+.address__info-email {
+  margin: 0;
+  margin-bottom: 23px;
+}
+
+.address__info-address-title,
+.address__info-work-title,
+.address__info-phone-title,
+.address__info-email-title {
+  display: inline-block;
+  font-weight: 700;
+  margin: 0;
+  margin-bottom: 7px;
+}
+
+.address__info-address-text,
+.address__info-work-text,
+.address__info-phone-text,
+.address__info-email-text {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 19px;
+}
+
+.address__info-phone-text,
+.address__info-email-text {
+  text-decoration: none;
+  color: $basic-black;
+}

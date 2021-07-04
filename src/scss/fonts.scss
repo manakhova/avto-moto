@@ -4,8 +4,8 @@
   font-style: normal;
   font-display: swap;
   src:
-    url("avto-moto/public/fonts/OpenSans-Bold.woff2") format("woff2"),
-    url("avto-moto/public/fonts/OpenSans-Bold.woff") format("woff");
+    url("./fonts/OpenSans-Bold.woff2") format("woff2"),
+    url("./fonts/OpenSans-Bold.woff") format("woff");
 }
   
 @font-face {
@@ -14,8 +14,8 @@
   font-style: normal;
   font-display: swap;
   src:
-    url("avto-moto/public/fonts/OpenSans-SemiBold.woff2") format("woff2"),
-    url("avto-moto/public/fonts/OpenSans-SemiBold.woff") format("woff");
+    url("./fonts/OpenSans-SemiBold.woff2") format("woff2"),
+    url("./fonts/OpenSans-SemiBold.woff") format("woff");
 }
   
 @font-face {
@@ -24,6 +24,6 @@
   font-style: normal;
   font-display: swap;
   src:
-    url("avto-moto/public/fonts/OpenSans-Regular.woff2") format("woff2"),
-    url("avto-moto/public/fonts/OpenSans-Regular.woff") format("woff");
+    url("./fonts/OpenSans-Regular.woff2") format("woff2"),
+    url("./fonts/OpenSans-Regular.woff") format("woff");
 }

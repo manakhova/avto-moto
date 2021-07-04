@@ -1,0 +1,28 @@
+.features {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 0;
+  list-style: none;
+  max-width: 565px;
+}
+
+.features__item {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  margin: 12px 0 17px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 29px;
+    left: -0;
+    width: 100%;
+    height: 1px;
+    display: block;
+    background-color: $basic-black;
+    opacity: 0.2;
+    background-repeat: no-repeat;
+  }
+}

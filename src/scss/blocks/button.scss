@@ -1,8 +1,9 @@
 .button {
+  cursor: pointer;
   font-size: 14px;
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  padding: 16px 20px;
+  padding: 16px 18px;
   border: none;
   color: $basic-red;
   background-color: white;
@@ -12,5 +13,25 @@
   &--active {
     background-color: $basic-red;
     color: white;
+  }
+
+  &--tab {
+    text-transform: none;
+    font-size: 20px;
+    padding-top: 13px;
+    padding-bottom: 12px;
+    padding-left: 17px;
+    width: 195px;
+    box-sizing: border-box;
+    letter-spacing: 0.03em;
+    margin-left: -1px;
+  }
+
+  &--reply {
+    border: none;
+    text-transform: none;
+    letter-spacing: 0.03em;
+    font-size: 16px;
+    margin-left: 8px;
   }
 }

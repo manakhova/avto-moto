@@ -23,15 +23,29 @@ const Reviews = () => {
               </p>
             </article>
             <div className="reviews__item-rating rating">
-              <span className="reviews__item-rating-total">Советует</span>
-              <div className="reviews__item-rating-stars rating__stars">
-                <span style={{width: "80%"}}></span>
+              <span className="rating__total">Советует</span>
+              <div className="rating__stars">
+                <svg className="rating__stars-item" width="17" height="17">
+                  <use xlinkHref="#icon-star-active"></use>
+                </svg>
+                <svg className="rating__stars-item" width="17" height="17">
+                  <use xlinkHref="#icon-star-active"></use>
+                </svg>
+                <svg className="rating__stars-item" width="17" height="17">
+                  <use xlinkHref="#icon-star-active"></use>
+                </svg>
+                <svg className="rating__stars-item" width="17" height="17">
+                  <use xlinkHref="#icon-star"></use>
+                </svg>
+                <svg className="rating__stars-item" width="17" height="17">
+                  <use xlinkHref="#icon-star"></use>
+                </svg>
                 <span className="visually-hidden">Rating</span>
               </div>
             </div>
             <div className="reviews__item-other">
               <span className="reviews__item-other-date">1 минуту назад</span>
-              <button className="reviews__item-other-button button">Ответить</button>
+              <button className="reviews__item-other-button button button--reply">Ответить</button>
             </div>
           </li>
           <li className="reviews__item">
@@ -50,20 +64,36 @@ const Reviews = () => {
               Дизайн отличный, управление просто шикарно, ощущения за рулём такой машины особые. Но ремонт очень дорогой. 
               Пару месяцев назад пришлось менять двигатель. По стоимости вышло как новый автомобиль. 
               Так что, если покупать эту машину, надо быть готовым к большим расходам на обслуживание.
+              
               </p>
             </article>
             <div className="reviews__item-rating rating">
-              <span className="reviews__item-rating-total">Советует</span>
-              <div className="reviews__item-rating-stars rating__stars">
-                <span style={{width: "80%"}}></span>
+              <span className="rating__total">Советует</span>
+              <div className="rating__stars">
+                <svg className="rating__stars-item" width="17" height="17">
+                  <use xlinkHref="#icon-star-active"></use>
+                </svg>
+                <svg className="rating__stars-item" width="17" height="17">
+                  <use xlinkHref="#icon-star-active"></use>
+                </svg>
+                <svg className="rating__stars-item" width="17" height="17">
+                  <use xlinkHref="#icon-star-active"></use>
+                </svg>
+                <svg className="rating__stars-item" width="17" height="17">
+                  <use xlinkHref="#icon-star"></use>
+                </svg>
+                <svg className="rating__stars-item" width="17" height="17">
+                  <use xlinkHref="#icon-star"></use>
+                </svg>
                 <span className="visually-hidden">Rating</span>
               </div>
             </div>
             <div className="reviews__item-other">
               <span className="reviews__item-other-date">1 минуту назад</span>
-              <button className="reviews__item-other-button button">Ответить</button>
+              <button className="reviews__item-other-button button button--reply">Ответить</button>
             </div>
           </li>
+          
         </ul>
       </div>
     );

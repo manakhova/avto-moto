@@ -2,28 +2,28 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <footer className="page__footer page-footer">
+    <footer className="page__footer">
       <ul className="navigation navigation--footer">
         <li className="navigation__item">
-            <a className="navigation__link" href="/">Корпоративным клиентам</a>
+            <a className="navigation__link navigation__link--footer" href="/">Корпоративным клиентам</a>
           </li>
           <li className="navigation__item">
-            <a className="navigation__link" href="/">Клиентам</a>
+            <a className="navigation__link navigation__link--footer" href="/">Клиентам</a>
           </li>
           <li className="navigation__item">
-            <a className="navigation__link" href="/">Аренда авто</a>
+            <a className="navigation__link navigation__link--footer" href="/">Аренда авто</a>
           </li>
           <li className="navigation__item">
-            <a className="navigation__link" href="/">Каршеринг</a>
+            <a className="navigation__link navigation__link--footer" href="/">Каршеринг</a>
           </li>
           <li className="navigation__item">
-            <a className="navigation__link" href="/">Как продать авто</a>
+            <a className="navigation__link navigation__link--footer" href="/">Как продать авто</a>
           </li>
           <li className="navigation__item">
-            <a className="navigation__link" href="/">Trade-in</a>
+            <a className="navigation__link navigation__link--footer" href="/">Trade-in</a>
           </li>
           <li className="navigation__item">
-            <a className="navigation__link" href="/">Test drive</a>
+            <a className="navigation__link navigation__link--footer" href="/">Test drive</a>
           </li>
       </ul>
     </footer>

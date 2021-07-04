@@ -1,0 +1,16 @@
+.rating {
+  display: flex;
+}
+
+.rating__total {
+  order: 1;
+  color: $basic-red;
+}
+
+.rating__stars {
+  margin-right: 17px;
+}
+
+.rating__stars-item {
+  margin-right: 4px;
+}

@@ -5,10 +5,25 @@
   margin: 0;
   padding: 0;
   color: $basic-black;
+
+  &--footer {
+    width: 81%;
+    max-width: 1166px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
 }
   
 .navigation__link {
   color: $basic-black;
   text-decoration: none;
-  margin-left: 78px;
+  margin-left: 73px;
+
+  &--footer {
+    margin-left: 0;
+    font-size: 17px;
+  }
 }
