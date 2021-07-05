@@ -2,7 +2,7 @@ import React from 'react';
 
 const Address = () => {
   return (
-    <div className="main-info__address address" style={{display: "none"}}>
+    <div className="main-info__section main-info__address address">
       <div className="address__info">
         <p className="address__info-address">
           <span className="address__info-address-title">Адрес</span>

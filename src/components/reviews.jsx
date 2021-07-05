@@ -2,7 +2,7 @@ import React from 'react';
 
 const Reviews = () => {
     return (
-        <div className="main-info__reviews reviews">
+        <div className="main-info__section main-info__reviews reviews">
         <button className="reviews__button button">Оставить отзыв</button>
         <ul className="reviews__list">
           <li className="reviews__item">
@@ -25,13 +25,13 @@ const Reviews = () => {
             <div className="reviews__item-rating rating">
               <span className="rating__total">Советует</span>
               <div className="rating__stars">
-                <svg className="rating__stars-item" width="17" height="17">
+                <svg className="rating__stars-item rating__stars-item--checked" width="17" height="17">
                   <use xlinkHref="#icon-star-active"></use>
                 </svg>
-                <svg className="rating__stars-item" width="17" height="17">
+                <svg className="rating__stars-item rating__stars-item--checked" width="17" height="17">
                   <use xlinkHref="#icon-star-active"></use>
                 </svg>
-                <svg className="rating__stars-item" width="17" height="17">
+                <svg className="rating__stars-item rating__stars-item--checked" width="17" height="17">
                   <use xlinkHref="#icon-star-active"></use>
                 </svg>
                 <svg className="rating__stars-item" width="17" height="17">
@@ -70,13 +70,13 @@ const Reviews = () => {
             <div className="reviews__item-rating rating">
               <span className="rating__total">Советует</span>
               <div className="rating__stars">
-                <svg className="rating__stars-item" width="17" height="17">
+                <svg className="rating__stars-item rating__stars-item--checked" width="17" height="17">
                   <use xlinkHref="#icon-star-active"></use>
                 </svg>
-                <svg className="rating__stars-item" width="17" height="17">
+                <svg className="rating__stars-item rating__stars-item--checked" width="17" height="17">
                   <use xlinkHref="#icon-star-active"></use>
                 </svg>
-                <svg className="rating__stars-item" width="17" height="17">
+                <svg className="rating__stars-item rating__stars-item--checked" width="17" height="17">
                   <use xlinkHref="#icon-star-active"></use>
                 </svg>
                 <svg className="rating__stars-item" width="17" height="17">

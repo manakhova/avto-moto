@@ -110,6 +110,11 @@
   margin-bottom: 18px;
 }
 
+.modal__rating-container {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
 .modal__rating-title {
   font-size: 15px;
   font-weight: 600;
@@ -121,5 +126,19 @@
 }
 
 .modal__form textarea {
-    padding-bottom: 10px;
-  }
+  padding-bottom: 25px;
+}
+
+.modal__rating-image {
+  fill: $basic-black;
+  opacity: 0.7;
+} 
+
+.modal__rating-input:checked~.modal__rating-label .modal__rating-image,
+.modal__rating-input:focus~.modal__rating-label .modal__rating-image,
+.modal__rating-label:hover .modal__rating-image,
+.modal__rating-label:hover~.modal__rating-label .modal__rating-image {
+  cursor: pointer;
+  fill: $basic-red;
+  opacity: 1;
+}

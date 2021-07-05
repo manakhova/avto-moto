@@ -13,4 +13,9 @@
 
 .rating__stars-item {
   margin-right: 4px;
+  opacity: 0.5;
+
+  &--checked {
+    opacity: 1;
+  }
 }

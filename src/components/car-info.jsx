@@ -1,11 +1,16 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-const CarInfo = () => {
+const CarInfo = (props) => {
+  const {photo,
+    onPrevButtonClick,
+    onNextButtonClick} = props;
+
   return (
     <section className="car-info">
       <h1 className="car-info__title visually-hidden">Информация об автомобиле</h1>
         <div className="car-info__container">
-          <img className="car-info__photo" width="600px" height="375px" src="./img/1.jpg" alt="Фото автомобиля"/>
+          <img className="car-info__photo" width="600px" height="375px" src={`./img/${photo}.jpg`} alt="Фото автомобиля"/>
           <div className="car-info__text-container">
             <h2 className="car-info__title">Марпех 11</h2>
             <ul className="car-info__features">
@@ -47,7 +52,7 @@ const CarInfo = () => {
           </div>
         </div>
         <div className="car-info__slider">
-          <button className="car-info__slider-button" id="left-button" disabled>
+          <button className="car-info__slider-button" id="prev-button" onClick={onPrevButtonClick(photo)}>
            <svg className="car-info__slider-button-icon" width="20" height="13">
               <use xlinkHref="#arrow"></use>
             </svg>
@@ -63,7 +68,7 @@ const CarInfo = () => {
               <img className="slider__photo" id="3" width="128px" height="80px" src="./img/3.jpg" alt="Фото автомобиля 3"/>
             </li>
           </ul>
-          <button className="car-info__slider-button" id="right-button">
+          <button className="car-info__slider-button" id="next-button" onClick={onNextButtonClick(photo)}>
            <svg className="car-info__slider-button-icon" width="20" height="13">
               <use xlinkHref="#arrow"></use>
             </svg>
@@ -71,6 +76,12 @@ const CarInfo = () => {
         </div>
       </section>
   );
+};
+
+CarInfo.propTypes = {
+  photo: PropTypes.number.isRequired,
+  onPrevButtonClick: PropTypes.func.isRequired,
+  onNextButtonClick: PropTypes.func.isRequired,
 };
 
 export default CarInfo;

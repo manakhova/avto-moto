@@ -2,7 +2,7 @@ import React from 'react';
 
 const Features = () => {
   return (
-    <ul className="main-info__features features" style={{display: "none"}}>
+    <ul className="main-info__section main-info__features features">
       <li className="features__item">
         <span className="features__item-title">Трансмиссия</span>
         <span className="features__item-value">Роботизированная</span>
