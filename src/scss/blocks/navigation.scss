@@ -5,15 +5,23 @@
   margin: 0;
   padding: 0;
   color: $basic-black;
+  flex-wrap: wrap;
+
+  &--header {
+    margin-right: 10px;
+  }
 
   &--footer {
-    width: 81%;
-    max-width: 1166px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     padding-top: 30px;
     padding-bottom: 30px;
+    max-width: 1170px;
+  }
+
+  @media (min-width: 1024px) {
+    justify-content: start;
   }
 }
   
@@ -24,6 +32,11 @@
 
   &--footer {
     margin-left: 0;
+    margin-right: 64px;
     font-size: 17px;
   }
+}
+
+.navigation__item:last-of-type .navigation__link--footer {
+  margin-right: 0;
 }

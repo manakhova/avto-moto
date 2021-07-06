@@ -31,6 +31,7 @@ const Features = () => {
         <span className="features__item-title">Количество цилиндров</span>
         <span className="features__item-value">4</span>
       </li>
+      
     </ul>
   );
 };

@@ -48,7 +48,7 @@ const Reviews = (props) => {
             </p>
             <p className="reviews__item-limitations">
               <span className="reviews__item-limitations-title">Недостатки</span>
-              <span className="reviews__item-limitations-list">{review.limitaions}</span>
+              <span className="reviews__item-limitations-list">{review.limitations}</span>
             </p>
             <article className="reviews__item-comment">
               <span className="reviews__item-comment-title">Комментарий</span>

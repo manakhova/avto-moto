@@ -123,6 +123,22 @@
   }
 }
 
+.modal__form-container-input .modal__label:first-of-type,
+.modal__rating + .modal__label:last-of-type {
+  position: relative; 
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 13px;
+    left: 12px;
+    width: 19px;
+    height: 19px;
+    background-image: url("../svg/snowflake.svg");
+    background-repeat: no-repeat;
+  }
+}
+
 .modal__rating {
   display: flex;
   justify-content: space-between;
