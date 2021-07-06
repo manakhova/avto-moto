@@ -13,9 +13,8 @@
 
 .rating__stars-item {
   margin-right: 4px;
-  opacity: 0.5;
 
-  &--checked {
+  &:checked {
     opacity: 1;
   }
 }

@@ -101,6 +101,26 @@
   padding: 17px 25px;
   border: 1px solid;
   border-color: rgba(0, 0, 0, 0.3);
+
+  &--required {
+    border: 1px solid $basic-red;
+  }
+}
+
+.modal__label {
+  &--required {
+    position: relative;
+
+    &::before {
+      content: "Пожалуйста, заполните поле";
+      position: absolute;
+      top: -25px;
+      left: 0;
+      display: block;
+      color: $basic-red;
+      font-size: 14px;
+    }
+  }
 }
 
 .modal__rating {
@@ -113,6 +133,21 @@
 .modal__rating-container {
   display: flex;
   flex-direction: row-reverse;
+
+  &--required {
+    position: relative;
+
+    &::before {
+      content: "Пожалуйста, выберите одно из значений";
+      position: absolute;
+      top: -27px;
+      left: -125px;
+      display: block;
+      color: #D12136;
+      font-size: 14px;
+      width: 297px;
+    }
+  }
 }
 
 .modal__rating-title {

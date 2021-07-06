@@ -1,6 +1,7 @@
 export const ActionType = {
     CHANGE_PHOTO: `changePhoto`,
-    CHANGE_SECTION: `changeSection`
+    CHANGE_SECTION: `changeSection`,
+    ADD_NEW_REVIEW: `addNewReview`
   };
   
   
@@ -12,5 +13,9 @@ export const ActionCreator = {
   setNewSection: (section) => ({
     type: ActionType.CHANGE_SECTION,
     payload: section
+  }),
+  setNewReview: (review) => ({
+    type: ActionType.ADD_NEW_REVIEW,
+    payload: review
   })
 };

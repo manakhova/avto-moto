@@ -10,7 +10,7 @@ import {useEffect} from "react";
 import {FIRST_PHOTO_ID ,LAST_PHOTO_ID} from '../const.js'
 
 const Main = (props) => {
-  const {photo, setNewPhoto, currentSection, setNewSection} = props;
+  const {photo, setNewPhoto, currentSection, setNewSection, reviews} = props;
 
   useEffect(() => {
     const prevButton = document.querySelector(`#prev-button`);
@@ -20,14 +20,16 @@ const Main = (props) => {
     photo === 3 ? nextButton.setAttribute("disabled", "disabled") : nextButton.removeAttribute("disabled", "disabled");
   }, [photo]);
 
-  const handlePrevButtonClick = (photo) => () => {
+  const handlePrevButtonClick = (photo) => (evt) => {
+    evt.preventDefault();
     if (photo === FIRST_PHOTO_ID) {
       return;
     }
     setNewPhoto(--photo);
   };
 
-  const handleNextButtonClick = (photo) => () => { 
+  const handleNextButtonClick = (photo) => (evt) => { 
+    evt.preventDefault();
     if (photo === LAST_PHOTO_ID) {
       return;
     }
@@ -42,7 +44,11 @@ const Main = (props) => {
       if (!element.classList.contains(`${currentSection}`)) {
         element.style.display = `none`
       } else {
-        element.style.display = `block`
+        if (!element.classList.contains(`address`)) {
+          element.style.display = `block`
+        } else {
+          element.style.display = `flex`
+        }
       }  
     });
 
@@ -56,9 +62,10 @@ const Main = (props) => {
 
   }, [currentSection]);
 
-  const handleSectionButtonChange = () => (evt) => {
+  const handleSectionButtonChange = (evt) => {
     setNewSection(evt.target.id); 
   };
+
 
 
   return (
@@ -71,12 +78,12 @@ const Main = (props) => {
         />
         <section className="main-info">
           <div className="main-info__tabs">
-            <button className="main-info__button button button--tab" type="button" id="features" onClick={handleSectionButtonChange()} onFocus={handleSectionButtonChange()}>Характеристики</button>
-            <button className="main-info__button button button--tab" type="button" id="reviews" onClick={handleSectionButtonChange()} onFocus={handleSectionButtonChange()}>Отзывы</button>
-            <button className="main-info__button button button--tab" type="button" id="address" onClick={handleSectionButtonChange()} onFocus={handleSectionButtonChange()}>Контакты</button>
+            <button className="main-info__button button button--tab" type="button" id="features" onClick={handleSectionButtonChange} onFocus={handleSectionButtonChange}>Характеристики</button>
+            <button className="main-info__button button button--tab" type="button" id="reviews" onClick={handleSectionButtonChange} onFocus={handleSectionButtonChange}>Отзывы</button>
+            <button className="main-info__button button button--tab" type="button" id="address" onClick={handleSectionButtonChange} onFocus={handleSectionButtonChange}>Контакты</button>
           </div>
           <Features/>
-          <Reviews/>
+          <Reviews reviews={reviews}/>
           <Address/>
         </section>
       </div>
@@ -88,13 +95,16 @@ Main.propTypes = {
   photo: PropTypes.number.isRequired,
   setNewPhoto: PropTypes.func.isRequired,
   currentSection: PropTypes.string.isRequired,
-  setNewSection: PropTypes.func.isRequired
+  setNewSection: PropTypes.func.isRequired,
+  reviews: PropTypes.array.isRequired,
+  setNewReview: PropTypes.func.isRequired,
 }
 
 const mapStateToProps = (state) => {
   return {
     photo: state.photo,
-    currentSection: state.currentSection
+    currentSection: state.currentSection,
+    reviews: state.reviews
   };
 };
 
@@ -104,6 +114,9 @@ const mapDispatchToProps = (dispatch) => ({
   },
   setNewSection(currentSection) {
     dispatch(ActionCreator.setNewSection(currentSection));
+  },
+  setNewReview(review) {
+    dispatch(ActionCreator.setNewReview(review));
   },
 });
 
