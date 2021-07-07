@@ -30,16 +30,18 @@ const Modal = (props) => {
         limitations: `${limitationsInput.value}`,
         comment: `${commentTextarea.value}`,
         rating: Number(checkedStar.value)
-      }
-      
-      setNewReview(newReview);
-      closePopup();
+    }
+
+    localStorage['userData'] = JSON.stringify(newReview);
+    
+    setNewReview(newReview);
+    closePopup();
     }
   }
 
   return (
     <div className="modal" style={{display: "none"}}>
-      <form className="modal__form" action="" method="post">
+      <form className="modal__form" action="https://echo.htmlacademy.ru/" method="post">
         <div className="modal__container">
           <h2 className="modal__title">Оставить отзыв</h2>
           <button className="modal__button modal__button--close" type="button" onClick={handleCloseButtonClick}></button>

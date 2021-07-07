@@ -28,6 +28,8 @@ export const closePopup = () => {
   nameInput.parentElement.classList.remove(`modal__label--required`);
   commentTextarea.classList.remove(`modal__input--required`);
   commentTextarea.parentElement.classList.remove(`modal__label--required`);
+
+  document.querySelector(`body`).style.overflow = `scroll`;
 };
 
 export const closeKeydownPopup = (evt) => {

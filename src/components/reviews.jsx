@@ -8,6 +8,7 @@ const Reviews = (props) => {
     const popup = document.querySelector('.modal');
     popup.style.display = `block`;
     popup.querySelector('#name').focus();
+    document.querySelector(`body`).style.overflow = `hidden`;
     document.addEventListener('keydown', closeKeydownPopup);
     document.addEventListener('click', closeLayoutPopup);
   };
