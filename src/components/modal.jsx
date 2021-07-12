@@ -44,24 +44,24 @@ const Modal = (props) => {
       <form className="modal__form" action="https://echo.htmlacademy.ru/" method="post">
         <div className="modal__container">
           <h2 className="modal__title">Оставить отзыв</h2>
-          <button className="modal__button modal__button--close" type="button" onClick={handleCloseButtonClick}></button>
+          <button className="modal__button modal__button--close" type="button" tabindex="7" onClick={handleCloseButtonClick}></button>
         </div>
         <div className="modal__form-container">
           <div className="modal__form-container-input">
             <label className="modal__label">
-              <input className="modal__input" id="name" type="text" placeholder="Имя" required/>
+              <input className="modal__input" id="name" type="text" placeholder="Имя" tabindex="1" required/>
             </label>
             <label className="modal__label">
-              <input className="modal__input" id="dignity" type="text" placeholder="Достоинства"/>
+              <input className="modal__input" id="dignity" type="text" tabindex="2" placeholder="Достоинства"/>
             </label>
             <label className="modal__label">
-              <input className="modal__input" id="limitations" type="text" placeholder="Недостатки"/>
+              <input className="modal__input" id="limitations" type="text" tabindex="3" placeholder="Недостатки"/>
             </label>
           </div>
           <div>
             <div className="modal__rating">
               <h3 className="modal__rating-title">Оцените товар:</h3>
-              <div className="modal__rating-container">
+              <div className="modal__rating-container" tabindex="4">
                 <input className="modal__rating-input visually-hidden" name="rating" value="5" id="5-stars" type="radio"/>
                 <label htmlFor="5-stars" className="modal__rating-label" title="perfect">
                   <svg className="modal__rating-image" width="27" height="27">
@@ -99,11 +99,11 @@ const Modal = (props) => {
                 </div>
             </div>
             <div className="modal__label">
-              <textarea className="modal__input" name="comment" id="comment" cols="30" rows="5" placeholder="Комментарий" required></textarea>
+              <textarea className="modal__input" tabindex="5" name="comment" id="comment" cols="30" rows="5" placeholder="Комментарий" required></textarea>
             </div>
           </div>
         </div>
-        <button className="modal__button button button--active" type="submit" onClick={handleSaveReviewClick}>Оставить отзыв</button>
+        <button className="modal__button button button--active" type="submit" onClick={handleSaveReviewClick} tabindex="6">Оставить отзыв</button>
       </form>
     </div>
   );

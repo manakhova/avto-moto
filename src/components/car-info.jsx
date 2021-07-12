@@ -52,7 +52,7 @@ const CarInfo = (props) => {
           </div>
         </div>
         <div className="car-info__slider">
-          <button className="car-info__slider-button" id="prev-button" onClick={onPrevButtonClick(photo)}>
+          <button className="car-info__slider-button" id="prev-button" onClick={onPrevButtonClick(photo)} aria-label="Влево">
            <svg className="car-info__slider-button-icon" width="20" height="13">
               <use xlinkHref="#arrow"></use>
             </svg>
@@ -68,7 +68,7 @@ const CarInfo = (props) => {
               <img className="slider__photo" id="3" width="128px" height="80px" src="./img/3.jpg" alt="Фото автомобиля 3"/>
             </li>
           </ul>
-          <button className="car-info__slider-button" id="next-button" onClick={onNextButtonClick(photo)}>
+          <button className="car-info__slider-button" id="next-button" onClick={onNextButtonClick(photo)} aria-label="Вправо">
            <svg className="car-info__slider-button-icon" width="20" height="13">
               <use xlinkHref="#arrow"></use>
             </svg>
